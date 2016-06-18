@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/07/2015 12:58:58 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="modelo.TipoUsuario" table="tipo_usuario" schema="public">
+		<id name="idTipoUsuario" type="int">
+			<column name="id_tipo_usuario" />
+			<generator class="assigned" />
+		</id>
+		<property name="nombre" type="string">
+			<column name="nombre" not-null="true" />
+		</property>
+		<property name="siglas" type="string">
+			<column name="siglas" not-null="true" />
+		</property>
+		<property name="estatus" type="boolean">
+			<column name="estatus" not-null="true" />
+		</property>
+		<set name="usuarioses" table="usuarios" inverse="true" lazy="true"
+			fetch="select">
+			<key>
+				<column name="tipo_usuario" not-null="true" />
+			</key>
+			<one-to-many class="modelo.Usuarios" />
+		</set>
+	</class>
+</hibernate-mapping>

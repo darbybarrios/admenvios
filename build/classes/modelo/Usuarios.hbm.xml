@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/07/2015 11:41:37 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="modelo.Usuarios" table="usuarios" schema="public">
+        <id name="idUsuario" type="int">
+            <column name="id_usuario" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tipoUsuario" class="modelo.TipoUsuario" fetch="select">
+            <column name="tipo_usuario" not-null="true" />
+        </many-to-one>
+        <many-to-one name="pais" class="modelo.Pais" fetch="select">
+            <column name="pais" />
+        </many-to-one>
+        <many-to-one name="destino" class="modelo.Destino" fetch="select">
+            <column name="destino" />
+        </many-to-one>
+        <property name="usuario" type="string">
+            <column name="usuario" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" not-null="true" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" not-null="true" />
+        </property>
+        <property name="clave" type="string">
+            <column name="clave" not-null="true" />
+        </property>
+        <property name="identificador" type="string">
+            <column name="identificador" />
+        </property>
+        <property name="estatus" type="boolean">
+            <column name="estatus" not-null="true" />
+        </property>
+        <property name="activo" type="boolean">
+            <column name="activo" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" />
+        </property>
+        <property name="fechaRegistro" type="string">
+            <column name="fecha_registro" />
+        </property>
+    </class>
+</hibernate-mapping>

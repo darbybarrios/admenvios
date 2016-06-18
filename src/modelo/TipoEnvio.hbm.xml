@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/11/2015 10:38:52 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="modelo.TipoEnvio" table="tipo_envio" schema="public">
+        <id name="idTipoEnvio" type="int">
+            <column name="id_tipo_envio" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <property name="siglas" type="string">
+            <column name="siglas" />
+        </property>
+        <property name="estatus" type="java.lang.Boolean">
+            <column name="estatus" />
+        </property>
+        <set name="envioses" table="envios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tipo_envio" />
+            </key>
+            <one-to-many class="modelo.Envios" />
+        </set>
+    </class>
+</hibernate-mapping>

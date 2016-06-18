@@ -1,0 +1,61 @@
+<?page title="Cargo Box"?>
+<zk>
+	<div align="center">
+		<window width="1015px" height="850px" border="normal"
+			apply="controlador.Login">
+
+			<borderlayout>
+				<north border="none">
+					<div align="left">
+                        <vbox>
+                            <html>
+                                <![CDATA[  
+                                        <table width="100%" border="0">       
+                                            
+                                            <tr>
+                                                <td>
+                                                     <img src="imagenes/logo.png" />                                                    
+                                                </td>                                            
+                                            </tr>
+                                        </table>
+                                ]]>
+                            </html>
+                        </vbox>
+                    </div>
+				
+				</north>
+				<center border="none" autoscroll="true">
+					<div align="center" width="50%">
+						<space height="150px" />
+						<grid oddRowSclass="non-odd" width="90%">
+							<rows>
+								<row>
+									<div align="right">
+										<label value="Usuario:"></label>
+									</div>
+									<textbox id="txtUsuario" focus="true"></textbox>
+								</row>
+								<row>
+									<div align="right">
+										<label value="Contraseña:"></label>
+									</div>
+									<textbox id="txtContrasena" type="password"></textbox>
+								</row>
+							</rows>
+						</grid>
+						<button label="Entrar" onClick="" id="btnEntrar">
+						</button>
+						<button label="Limpiar" onClick="" id="btnLimpiar">
+						</button>
+						<button label="Registrarse" onClick="" id="btnRegistrarse" />
+					
+
+					</div>
+				</center>
+				<south border="none">
+				</south>
+			</borderlayout>
+
+		</window>
+	</div>
+</zk>

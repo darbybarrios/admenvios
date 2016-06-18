@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/07/2015 01:35:38 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="modelo.Estatus" table="estatus" schema="public">
+        <id name="idEstatus" type="int">
+            <column name="id_estatus" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="destino" class="modelo.Destino" fetch="select">
+            <column name="id_destino" />
+        </many-to-one>
+        <property name="descripcion" type="string">
+            <column name="descripcion" />
+        </property>
+        <property name="siglas" type="string">
+            <column name="siglas" />
+        </property>
+        <property name="estatus" type="java.lang.Boolean">
+            <column name="estatus" />
+        </property>
+        <set name="envioses" table="envios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_estatus" />
+            </key>
+            <one-to-many class="modelo.Envios" />
+        </set>
+    </class>
+</hibernate-mapping>

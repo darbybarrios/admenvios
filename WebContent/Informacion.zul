@@ -1,0 +1,42 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div  id="grContenedor" apply="controlador.Informacion">
+		<groupbox mold="3d" closable="false">
+			<caption id="caption" label="Información para el envio" />
+			<div align="center">
+				
+				<label id="lblNombre"></label>
+			</div>
+			<div>
+			
+				<label id="lblDireccion"></label>
+			</div>
+			<div>
+				<label >Miami, Florida 33166</label>
+			</div>
+			<div >
+				<label >Tel:  (305) 677.0991</label>
+			</div>
+
+		</groupbox>
+		
+		<groupbox id="group" mold="3d" closable="false">
+			<caption label="Información para el envio maritimo" />
+			<div align="center">
+				
+				<label id="lblNombre1"></label>
+			</div>
+			<div>
+			
+				<label id="lblDireccion1"></label>
+			</div>
+			<div>
+				<label >Miami, Florida 33166</label>
+			</div>
+			<div >
+				<label >Tel:  (786) 315.4600</label>
+			</div>
+
+		</groupbox>
+	</div>
+</zk>

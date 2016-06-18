@@ -1,0 +1,57 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<div>
+		<groupbox mold="3d" closable="false" id="grContenedor" apply="controlador.ListaUsuarios">
+			<separator/>
+			<tabbox>
+				<tabs>
+					<tab id="tab1" label="Usuarios por Activar"></tab>									
+					<tab id="tab2" label="Usuarios Activos" ></tab>
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+					<space />
+						<div align="center">
+							<listbox id="listaUsuarios" multiple="false" width="100%"
+								mold="paging" pagingPosition="bottom" pageSize="10">
+								<listhead sizable="true">
+									<listheader label="id" width="1%" sort="auto" visible="false"/>
+									<listheader label="Usuario" width="10%" sort="auto" />
+									<listheader label="Nombre" width="10%" sort="auto" />
+									<listheader label="Apellido" width="10%" sort="auto" />
+									<listheader label="Correo" width="10%" sort="auto" />
+									<listheader label="Casillero" width="10%" sort="auto" />
+									<listheader label="idDestino" width="1%" sort="auto" visible="false"/>
+									<listheader label="clave" width="10%" sort="auto" visible="false"/>
+									<listheader label="idPais" width="1%" sort="auto" visible="false"/>
+									
+								</listhead>
+							</listbox>
+						</div>
+					</tabpanel>
+					<tabpanel>
+					<space />
+						<div align="center">
+							<listbox id="listaUsuariosActivos" multiple="false" width="100%"
+								mold="paging" pagingPosition="bottom" pageSize="10">
+								<listhead sizable="true">
+									<listheader label="id" width="1%" sort="auto" visible="false"/>
+									<listheader label="Usuario" width="10%" sort="auto" />
+									<listheader label="Nombre" width="10%" sort="auto" />
+									<listheader label="Apellido" width="10%" sort="auto" />
+									<listheader label="Correo" width="10%" sort="auto" />
+									<listheader label="Identificador" width="10%" sort="auto" />
+									<listheader label="idTipo" width="1%" sort="auto" visible="false"/>
+									<listheader label="clave" width="10%" sort="auto" visible="false"/>
+									
+								</listhead>
+							</listbox>
+						</div>
+					</tabpanel>				
+				</tabpanels>		
+			</tabbox>
+			
+
+		</groupbox>
+	</div>
+</zk>

@@ -1,0 +1,50 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div>
+		<groupbox mold="3d" closable="false" id="grContenedor" apply="controlador.ListaEnvioGeneral">
+			<separator/>
+			<tabbox> 
+				<tabs>
+					<tab id="tab1" label="Lista Envios"></tab>									
+					<tab id="tab2" label="Envios Entregados" ></tab>
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+					<space />
+						<div align="center">
+							<listbox id="listaEnvios" multiple="false" width="100%"
+								mold="paging" pagingPosition="bottom" pageSize="10">
+								<listhead sizable="true">
+									<listheader align="center" label="id" width="10%" sort="auto" visible="false" />
+									<listheader align="center" label="Fecha" width="10%" sort="auto" />
+									<listheader align="center" label="Casillero" width="10%"	sort="auto" />
+									<listheader align="center" label="Nombre y Apellido" width="22%" sort="auto" />
+									<listheader align="center" label="Volumen" width="10%" sort="auto" />
+									<listheader align="center" label="Valor Envio" width="10%"	sort="auto" />
+									<listheader align="center" label="Estatus" width="10%" sort="auto" />
+								</listhead>
+							</listbox>
+						</div>					
+					</tabpanel>
+					<tabpanel>
+					<space />
+						<div align="center">
+						<listbox id="listaEnviosEntregados" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10">
+							<listhead sizable="true">
+								<listheader align="center" label="id" width="10%" sort="auto" visible="false" />
+								<listheader align="center" label="Fecha" width="10%" sort="auto" />
+								<listheader align="center" label="Casillero" width="10%"	sort="auto" />
+								<listheader align="center" label="Nombre y Apellido" width="22%" sort="auto" />
+								<listheader align="center" label="Volumen" width="10%" sort="auto" />
+								<listheader align="center" label="Valor Envio" width="10%"	sort="auto" />
+								<listheader align="center" label="Estatus" width="10%" sort="auto" />
+							</listhead>
+						</listbox>
+					</div>
+					</tabpanel>
+				</tabpanels>		
+			</tabbox>
+		</groupbox>
+	</div>
+</zk>

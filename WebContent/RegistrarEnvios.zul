@@ -1,0 +1,97 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<div>
+		<groupbox mold="3d" closable="false" id="grContenedor" apply="controlador.RegistrarEnvios">
+			<caption label="Registrar Envios" />
+			<div align="left">
+				<radiogroup id="sv1" />
+				<grid>
+					<columns>
+						<column hflex="2"></column>
+						<column hflex="6"></column>
+					</columns>
+					<rows>
+						<row>
+							<div align="right">
+								<label value="Fecha:" />
+							</div>
+							<div align="left">
+								<datebox sclass="mayuscula" id="txtFecha" maxlength="12"
+									cols="25" focus="false"  constraint="no empty"/>
+								<label sclass="obligatorio"
+									style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+							</div>
+						</row>
+						
+						<row>
+							<div align="right">
+								<label value="Tracking:" />
+							</div>
+							<div align="left">
+								<div>
+									<radio id="ra1" label="Si" radiogroup="sv1" />
+								</div>
+								<div>
+									<radio id="ra2" label="No" radiogroup="sv1" />
+								</div>
+							</div>
+
+						</row>
+						<row>
+							<div align="right">
+								<label id="lblEmpresa" value="Empresa que envia:"  visible="false"/>
+							</div>
+							<div align="left">
+								<textbox sclass="mayuscula" id="txtEmpresa" maxlength="12"
+									cols="25" focus="false" visible="false"/>							
+							</div>
+						</row>
+
+						<row>
+							<div align="right">
+								<label id="lblTracking" value="Numero de Tracking:"  visible="false"/>
+							</div>
+							<div align="left">
+								<textbox sclass="mayuscula" id="txtTracking" maxlength="30"
+									cols="25" focus="false" visible="false"/>							
+							</div>
+						</row>
+						<row>
+							<div align="right">
+								<label value="Descripción del Articulo:" />
+							</div>
+							<div align="left">
+								<textbox sclass="mayuscula" id="txtDescripcion" width="500px"
+									maxlength="200" cols="45" rows="5" readonly="false" constraint="no empty"/>
+								<label sclass="obligatorio"
+									style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+							</div>
+						</row>
+						<row>
+						<div align="right">
+							<label value="Tipo de Envio:" left="true"></label>
+						</div>
+						<div align="left">
+							<combobox id="cmbEnvio" focus="false"></combobox>
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					
+					</rows>
+				</grid>
+				<space />
+				<div align="left">
+					<label style="color:#CC0000; font-size:10px;font-weight:bold;"
+						value="* Campos Obligatorios" />
+				</div>
+				<div align="center" style="background:#C0C0C0;">
+					<button id="btnRegistrar" label="Registrar" onClick=""></button>
+					<button id="btnLimpiar" label="Limpiar" onClick=""></button>
+				</div>
+
+			</div>
+
+		</groupbox>
+	</div>
+</zk>

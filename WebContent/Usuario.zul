@@ -1,0 +1,122 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="windUsuario" title="Usuario" width="40%" border="normal" apply="controlador.Usuario">
+		<div align="left">
+		<radiogroup id="sv1" />
+			<grid>
+				<columns>
+					<column hflex="2"></column>
+					<column hflex="6"></column>
+				</columns>
+				<rows>					
+					<row>
+						<div align="right">
+							<label value="Usuario:" />
+						</div>
+						<div align="left">
+							<textbox sclass="mayuscula" id="txtCi" maxlength="12"
+								cols="25" focus="false" constraint="no empty" readonly="true"/>
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Nombre:" />
+						</div>
+						<div align="left">
+							<textbox sclass="mayuscula" id="txtNombre" width="225px"
+								maxlength="30" readonly="false" constraint="no empty" />
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Apellido:" />
+						</div>
+						<div align="left">
+							<textbox sclass="mayuscula" id="txtApellido" width="225px"
+								maxlength="30" readonly="false" constraint="no empty"/>
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Correo:" />
+						</div>
+						<div align="left">
+							<textbox sclass="mayuscula" id="txtCorreo" width="225px"
+								readonly="false"
+								constraint="/.+@.+\.[a-z]+/: Por favor sumistre una cuenta de correo válida." />
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Teléfono:" />
+						</div>
+						<div align="left">
+							<textbox id="txtTelefono" width="225px" maxlength="12"
+								constraint="no empty" />
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Dirección:" />
+						</div>
+						<div align="left">
+							<textbox sclass="mayuscula" id="txtDireccion" width="225px"
+									maxlength="300" cols="45" rows="5" readonly="false" constraint="no empty"/>
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					<row>
+						<div align="right">
+							<label value="Destino:" />
+						</div>
+						<div align="left">
+							<div>
+								<radio id="ra1" label="USA - Panama"
+									radiogroup="sv1" value="2"/>
+							</div>
+							<div>
+								<radio id="ra2" label="USA - Venezuela(Barquisimeto)"
+									radiogroup="sv1" value="1"/>
+							</div>
+						</div>
+
+					</row>
+					<row>
+						<div align="right">
+							<label value="Casillero:" />
+						</div>
+						<div align="left">
+							<textbox id="txtIdentificador" width="225px" maxlength="30"
+								constraint="no empty" />
+							<label sclass="obligatorio"
+								style="color:#CC0000; font-size:10px;font-weight:bold;" value="*" />
+						</div>
+					</row>
+					
+					
+					
+				</rows>
+			</grid>
+			<space />
+			<div align="left">
+				<label style="color:#CC0000; font-size:10px;font-weight:bold;"
+					value="* Campos Obligatorios" />
+			</div>
+			<div align="center" style="background:#C0C0C0;">
+				<button id="btnModificar" label="Modificar" onClick=""></button>
+			</div>
+
+		</div>
+	</window>
+</zk>

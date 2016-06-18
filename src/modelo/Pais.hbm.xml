@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/07/2015 11:41:37 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="modelo.Pais" table="pais" schema="public">
+        <id name="idPais" type="int">
+            <column name="id_pais" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="siglas" type="string">
+            <column name="siglas" />
+        </property>
+        <property name="estatus" type="java.lang.Boolean">
+            <column name="estatus" />
+        </property>
+        <set name="usuarioses" table="usuarios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pais" />
+            </key>
+            <one-to-many class="modelo.Usuarios" />
+        </set>
+    </class>
+</hibernate-mapping>

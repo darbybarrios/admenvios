@@ -1,0 +1,80 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<div align="center">
+		<window id="windPrincipal" width="1015px" height="850px" border="normal" 
+			apply="controlador.Principal">
+			<borderlayout>
+				<north border="none">
+					<div align="left">
+                        <vbox>
+                            <html>
+                                <![CDATA[  
+                                        <table width="100%" border="0">       
+                                            
+                                            <tr>
+                                                <td>
+                                                     <img src="imagenes/logo.png" />                                                    
+                                                </td>                                            
+                                            </tr>
+                                        </table>
+                                ]]>
+                            </html>
+                        </vbox>
+                        <vbox>
+                        <div align="left">							
+							<button id="btnSalir" label="Salir" onClick="" />
+						</div>
+                        </vbox>
+                    </div>
+				</north>
+				<center border="none" autoscroll="true">
+					<div align="center">
+						<space />
+						<include id="pagina" src="" />
+					</div>
+				</center>
+				<west width="175px" title="Menú Principal" collapsible="true"
+					margins="0,0,0,0" border="none">
+					<div align="left">
+
+						<tabbox id="principal" onCreate="" mold="accordion">
+							<tabs id="opciones">
+								<tab id="tabEnvios" label="Envios" visible="false"></tab>
+								<tab id="tabAdministracion" label="Administración" visible="false"></tab>
+							</tabs>
+							<tabpanels>
+								<tabpanel >
+									<panel width="100%">
+										<panelchildren style="padding:5px;">
+											<vbox>
+												<toolbarbutton id="menuInformacion" label="Información" visible="false"/>
+												<toolbarbutton id="menuRegistrar" label="Notificar" visible="false"/>
+												<toolbarbutton id="menuLista" label="Lista" visible="false"/>
+											</vbox>
+										</panelchildren>
+									</panel>
+
+								</tabpanel>
+								<tabpanel>
+									<panel width="100%">
+										<panelchildren style="padding:5px;">
+											<vbox>
+												<toolbarbutton id="menuEnvios" label="Envios" visible="false"/>
+												<toolbarbutton id="menuUsuarios" label="Usuarios" visible="false"/>
+												<toolbarbutton id="menuEmpleados" label="Empleados" visible="false"/>
+											</vbox>
+										</panelchildren>
+									</panel>
+
+								</tabpanel>
+
+							</tabpanels>
+						</tabbox>
+					</div>
+				</west>
+				<south border="none">
+				</south>
+			</borderlayout>
+		</window>
+	</div>
+</zk>
